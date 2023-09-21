@@ -1,0 +1,40 @@
+{
+  "sectionIntro": {
+    "title": "Seja o herói de 130 crianças",
+    "text": "Sua doação ajuda o pequeno Mário e outras 130 crianças a ter um futuro melhor",
+    "buttonText": "Quero ajudar"
+  },
+  "sectionCases": {
+    "title": "Sua ajuda faz a diferença ",
+    "text": "Conheça histórias das nossas crianças e adolescentes que mudaram suas perspectivas com uma doação como a sua",
+    "cases": [
+      {
+        "image": "https://ucarecdn.com/e7248e21-653a-41af-a11f-2799a70b5faa/",
+        "title": "Sua ajuda faz a diferença",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "image": "https://ucarecdn.com/04d31f4c-9e12-4742-a8d0-9d105dad7a60/",
+        "title": "Sua ajuda faz a diferença",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "image": "https://ucarecdn.com/c6dd8844-354f-43c9-ab41-690a1ae149fa/",
+        "title": "Sua ajuda faz a diferença",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    ],
+    "buttonText": "Doe agora!"
+  },
+  "sectionAbout": {
+    "title": "quem somos",
+    "text": "Somos a **Associação Anjo da Guarda,** uma entidade não governamental e sem fins lucrativos, que ajuda crianças e adolescentes em situação de vulnerabilidade social, na região de São José do Rio Preto. Promovemos atividades e oficinas de recreação nas áreas de artes, cultura, esporte e lazer, além de fornecer assistência psicológica, social e alimentação para crianças e adolescentes de 6 a 14 anos.",
+    "buttonText": "Nossa história",
+    "body": "Somos a **Associação Anjo da Guarda,** uma entidade não governamental e sem fins lucrativos, que ajuda crianças e adolescentes em situação de vulnerabilidade social, na região de São José do Rio Preto. Promovemos atividades e oficinas de recreação nas áreas de artes, cultura, esporte e lazer, além de fornecer assistência psicológica, social e alimentação para crianças e adolescentes de 6 a 14 anos."
+  },
+  "sectionWaiting": {
+    "title": "Estamos esperando  por você!",
+    "text": "Ajude-nos a resgatar crianças e adolescentes em situação de risco e trazê-los para a escola!",
+    "buttonText": "Quero doar!"
+  }
+}

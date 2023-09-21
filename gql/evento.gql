@@ -1,0 +1,45 @@
+query evento($uid: String!, $lang: String!) {
+  evento(uid: $uid, lang: $lang){
+    title
+    description
+    featured_image
+    body {
+        __typename
+        ... on EventoBodyText {
+            type
+            label
+            primary {
+                text
+            }
+        }
+        ... on EventoBodyImage {
+            type
+            label
+            primary {
+                image
+            }
+        }
+        ... on EventoBodyEmbed {
+            type
+            label
+            primary {
+                embed
+            }
+        }
+        ...on EventoBodyImage_gallery {
+            type
+            label
+            fields {
+                gallery_image
+                image_description
+            }
+        }
+    }
+    _meta{
+      uid
+      firstPublicationDate
+      lastPublicationDate
+    }
+    
+  }
+}

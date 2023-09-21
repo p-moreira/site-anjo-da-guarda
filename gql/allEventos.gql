@@ -1,0 +1,58 @@
+query allEventos($categoryId: String, $after: String, $first: Int, $before: String, $last: Int){
+    allEventos(where: {category: $categoryId}, after: $after, first: $first, before: $before, last: $last) {
+        totalCount
+        pageInfo {
+          hasPreviousPage
+          hasNextPage
+          startCursor
+          endCursor
+        }
+        edges {
+            cursor
+            node {
+                title
+                description
+                featured_image
+                category {
+                    ... on Event_category {
+                        category_name
+                        _meta {
+                            uid
+                        }
+                    }
+                }
+                _meta {
+                    id
+                    uid
+                    firstPublicationDate
+                    lastPublicationDate
+                    type
+                }
+                body {
+                    __typename
+                    ... on EventoBodyText {
+                        type
+                        label
+                        primary {
+                            text
+                        }
+                    }
+                    ... on EventoBodyImage {
+                        type
+                        label
+                        primary {
+                            image
+                        }
+                    }
+                    ... on EventoBodyEmbed {
+                        type
+                        label
+                        primary {
+                            embed
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

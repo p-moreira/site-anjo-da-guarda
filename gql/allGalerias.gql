@@ -1,0 +1,58 @@
+query allGalerias($after: String, $first: Int, $before: String, $last: Int) {
+    allGalerias(after: $after, first: $first, before: $before, last: $last) {
+        totalCount
+        pageInfo {
+          hasPreviousPage
+          hasNextPage
+          startCursor
+          endCursor
+        }
+        edges {
+            cursor
+            node {
+                title
+                description
+                featured_image
+                _meta {
+                    id
+                    uid
+                    firstPublicationDate
+                    lastPublicationDate
+                    type
+                }
+                body {
+                    __typename
+                        ...on GaleriaBodyText {
+                            type
+                            label
+                            primary {
+                                text
+                            }
+                        }
+                        ...on GaleriaBodyImage {
+                            type
+                            label
+                            primary {
+                                image
+                            }
+                        }
+                        ...on GaleriaBodyEmbed {
+                            type
+                            label
+                            primary {
+                                embed
+                            }
+                        }
+                        ...on GaleriaBodyImage_gallery {
+                            type
+                            label
+                            fields {
+                                gallery_image
+                                image_description
+                            }
+                        }
+                }
+            }
+        }
+    }
+}

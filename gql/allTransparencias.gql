@@ -1,0 +1,75 @@
+query allTransparencias($after: String, $first: Int, $before: String, $last: Int) {
+    allTransparencias(after: $after, first: $first, before: $before, last: $last) {
+        totalCount
+        pageInfo {
+          hasPreviousPage
+          hasNextPage
+          startCursor
+          endCursor
+        }
+        edges {
+            cursor
+            node {
+                title
+                description
+                featured_image
+                interval
+                _meta {
+                    id
+                    uid
+                    firstPublicationDate
+                    lastPublicationDate
+                    type
+                }
+                body {
+                    __typename
+                        ...on TransparenciaBodyText {
+                            type
+                            label
+                            primary {
+                                text
+                            }
+                        }
+                        ...on TransparenciaBodyImage {
+                            type
+                            label
+                            primary {
+                                image
+                            }
+                        }
+                        ...on TransparenciaBodyEmbed {
+                            type
+                            label
+                            primary {
+                                embed
+                            }
+                        }
+                        ...on TransparenciaBodyReport_section {
+                            type
+                            label
+                            primary {
+                                report_section_title
+                                report_section_title_link {
+                                    __typename
+                                        ...on _FileLink {
+                                            name
+                                            url
+                                        }
+                                }
+                            }
+                            fields {
+                                report_section_item
+                                report_section_item_link {
+                                    __typename
+                                        ...on _FileLink {
+                                            name
+                                            url
+                                        }
+                                }
+                            }
+                        }
+                }
+            }
+        }
+    }
+}
