@@ -1,43 +1,75 @@
+# Nuxt 3 Minimal Starter
 
-# PWA - Associação Anjo da Guarda
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-Associação Anjos da Guarda is migrating you old site (https://anjodaguardaprojeto.wixsite.com/anjo) to a new modern PWA app: https://projetoanjodaguarda.org
+## Setup
 
-## 🎉 Getting Started
-
-**How to run the project**
-
-1. 👯‍♂️ Clone the repository locally and cd into the directory.
+Make sure to install the dependencies:
 
 ```bash
-git clone https://github.com/associacao-anjo-da-guarda/anjo-da-guarda.git
+# npm
+npm install
 
-cd anjo-da-guarda
-```
+# pnpm
+pnpm install
 
-2. 📦 Install dependencies.
-
-```bash
+# yarn
 yarn install
+
+# bun
+bun install
 ```
 
-3. 🏗 Run the project for local dev. This will start a hot-reloading server at `localhost:3000`.
+## Development Server
+
+Start the development server on `http://localhost:3000`:
 
 ```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm run dev
+
+# yarn
 yarn dev
+
+# bun
+bun run dev
 ```
 
-4. ⚡️ Generate a full static site. See more [in the docs](https://nuxtjs.org/blog/going-full-static).
+## Production
+
+Build the application for production:
 
 ```bash
-yarn build && yarn export
+# npm
+npm run build
+
+# pnpm
+pnpm run build
+
+# yarn
+yarn build
+
+# bun
+bun run build
 ```
 
-> We migrate the first version from Netlify CMS to Prismic (https://prismic.io). So, all content is fetched using Prismic Graphql
+Locally preview production build:
 
-## 💁‍♀️ Questions?
+```bash
+# npm
+npm run preview
 
-Contact us on linkedin: 
+# pnpm
+pnpm run preview
 
-Paulo Moreira: [https://www.linkedin.com/in/pmoreiralk/](https://www.linkedin.com/in/pmoreiralk/)
-Guilherme Carneiro: [https://www.linkedin.com/in/guilherme-soares-carneiro/](https://www.linkedin.com/in/guilherme-soares-carneiro/)
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
